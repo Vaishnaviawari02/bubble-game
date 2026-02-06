@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Ball & Fruit Pop Game</title>
+
+<style>
+    body {
+        margin: 0;
+        overflow: hidden;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to right, #74ebd5, #9face6);
+        text-align: center;
+    }
+
+    /* Header */
+    header {
+        background: rgba(0,0,0,0.6);
+        color: white;
+        padding: 15px;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    /* Footer */
+    footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background: rgba(0,0,0,0.6);
+        color: white;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    #scoreBoard, #timer {
+        position: fixed;
+        font-size: 20px;
+        color: white;
+    }
+
+    #scoreBoard { top: 70px; right: 20px; }
+    #timer { top: 70px; left: 20px; }
+
+    .item {
+        position: absolute;
+        font-size: 40px;
+        cursor: pointer;
+        animation: fade 3s linear forwards;
+    }
+
+    @keyframes fade {
+        from { opacity: 1; }
+        to { opacity: 0; transform: scale(1.5); }
+    }
+
+    #startScreen {
+        margin-top: 150px;
+        color: white;
+    }
+
+    input, button {
+        padding: 10px;
+        margin: 10px;
+        border: none;
+        border-radius: 5px;
+    }
+
+    button {
+        background-color: #333;
+        color: white;
+        cursor: pointer;
+    }
+</style>
+</head>
+
+<body>
+
+<!-- Header -->
+<header>
+    Ball & Fruit Pop Game
+</header>
+
+<!-- Start Screen -->
+<div id="startScreen">
+    <h2>Enter Player Name</h2>
+    <input type="text" id="playerName" placeholder="Enter Your Name">
+    <br>
+    <button onclick="startGame()">Start Game</button>
+</div>
+
+<div id="scoreBoard"></div>
+<div id="timer"></div>
+
+<!-- Footer -->
+<footer>
+    Click the balls and fruits to score points before time runs out!
+</footer>
+
+<script src="fi.js"></script>
+
+</body>
+</html>
+
